@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take-Home Pay Calculator | Work Pay Calculator</title>
+    <meta name="description" content="Estimate take-home pay after tax using gross pay and estimated tax rate.">
+    <meta name="keywords" content="take home pay calculator, net pay calculator, after tax income calculator">
+    <meta name="author" content="Work Pay Calculator">
+    <link rel="canonical" href="https://abi-1-1.github.io/work-pay-calculator/take-home-pay-calculator.html">
+
+    <meta property="og:title" content="Take-Home Pay Calculator">
+    <meta property="og:description" content="Estimate take-home pay after tax using gross pay and tax rate.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://abi-1-1.github.io/work-pay-calculator/take-home-pay-calculator.html">
+    <meta property="og:site_name" content="Work Pay Calculator">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Take-Home Pay Calculator">
+    <meta name="twitter:description" content="Estimate take-home pay after tax using gross pay and tax rate.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Work Pay Calculator</a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+                <a href="weekly-pay-calculator.html">Weekly Pay</a>
+                <a href="monthly-pay-calculator.html">Monthly Pay</a>
+                <a class="active" href="take-home-pay-calculator.html">Take-Home Pay</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-box">
+                    <h1>Take-Home Pay Calculator</h1>
+                    <p class="calculator-intro">
+                        Enter your gross pay and estimated tax rate to calculate your take-home pay after tax.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="grossPayInput">Gross Pay ($)</label>
+                        <input type="number" id="grossPayInput" placeholder="Enter gross pay">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="takeHomeTaxRate">Estimated Tax Rate for Your State/Area (%)</label>
+                        <input type="number" id="takeHomeTaxRate" placeholder="Enter your tax rate" value="20">
+                        <p class="field-note">Enter your estimated tax rate based on your state or local area. This is only a simple estimate.</p>
+                    </div>
+
+                    <div class="button-row">
+                        <button id="takeHomeCalculateButton">Calculate</button>
+                        <button type="button" class="secondary-action" id="resetTakeHomeButton">Reset</button>
+                    </div>
+
+                    <div class="result-box">
+                        <h2>Results</h2>
+                        <p><strong>Gross Pay (Before Tax):</strong> <span id="grossPayBeforeResult">$0.00</span></p>
+                        <p><strong>Take-Home Pay (After Tax):</strong> <span id="takeHomeAfterResult">$0.00</span></p>
+                    </div>
+                </div>
+
+                <div class="content-box calculator-content">
+                    <h2>How to calculate take-home pay</h2>
+                    <p>
+                        To estimate take-home pay, subtract your estimated taxes from your gross pay.
+                    </p>
+
+                    <p>
+                        This gives a simplified net pay estimate that can help with basic budgeting and pay planning.
+                    </p>
+
+                    <h2>Formula</h2>
+                    <p><strong>Gross Pay × (1 - Tax Rate ÷ 100) = Take-Home Pay</strong></p>
+
+                    <h2>Important note</h2>
+                    <p>
+                        This is a simple estimate and does not include exact federal, state, local, or payroll tax rules.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">Work Pay Calculator</div>
+                <p class="footer-text">Free salary and work calculators for the USA.</p>
+            </div>
+
+            <div>
+                <div class="footer-title">Pages</div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+
+            <div>
+                <div class="footer-title">Calculators</div>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+                <a href="weekly-pay-calculator.html">Weekly Pay</a>
+                <a href="monthly-pay-calculator.html">Monthly Pay</a>
+                <a href="take-home-pay-calculator.html">Take-Home Pay</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Work Pay Calculator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

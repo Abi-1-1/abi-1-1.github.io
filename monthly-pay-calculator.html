@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Pay Calculator | Work Pay Calculator</title>
+    <meta name="description" content="Estimate monthly pay before tax and after tax using hourly rate, weekly hours, and weeks per month.">
+    <meta name="keywords" content="monthly pay calculator, monthly income calculator, monthly salary calculator">
+    <meta name="author" content="Work Pay Calculator">
+    <link rel="canonical" href="https://abi-1-1.github.io/work-pay-calculator/monthly-pay-calculator.html">
+
+    <meta property="og:title" content="Monthly Pay Calculator">
+    <meta property="og:description" content="Estimate monthly pay before tax and after tax.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://abi-1-1.github.io/work-pay-calculator/monthly-pay-calculator.html">
+    <meta property="og:site_name" content="Work Pay Calculator">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Monthly Pay Calculator">
+    <meta name="twitter:description" content="Estimate monthly pay before tax and after tax.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Work Pay Calculator</a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+                <a href="weekly-pay-calculator.html">Weekly Pay</a>
+                <a class="active" href="monthly-pay-calculator.html">Monthly Pay</a>
+                <a href="take-home-pay-calculator.html">Take-Home Pay</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-box">
+                    <h1>Monthly Pay Calculator</h1>
+                    <p class="calculator-intro">
+                        Enter your hourly rate, weekly hours, weeks per month, and estimated tax rate
+                        to calculate your monthly pay before tax and after tax.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="monthlyHourlyRate">Hourly Rate ($)</label>
+                        <input type="number" id="monthlyHourlyRate" placeholder="Enter hourly rate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="monthlyHoursPerWeek">Hours Worked per Week</label>
+                        <input type="number" id="monthlyHoursPerWeek" placeholder="Enter weekly hours">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weeksPerMonth">Weeks per Month</label>
+                        <input type="number" id="weeksPerMonth" placeholder="Enter weeks per month" value="4.33" step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="monthlyTaxRate">Estimated Tax Rate for Your State/Area (%)</label>
+                        <input type="number" id="monthlyTaxRate" placeholder="Enter your tax rate" value="20">
+                        <p class="field-note">Enter your estimated tax rate based on your state or local area. This is only a simple estimate.</p>
+                    </div>
+
+                    <div class="button-row">
+                        <button id="monthlyCalculateButton">Calculate</button>
+                        <button type="button" class="secondary-action" id="resetMonthlyButton">Reset</button>
+                    </div>
+
+                    <div class="result-box">
+                        <h2>Results</h2>
+                        <p><strong>Monthly Pay (Before Tax):</strong> <span id="monthlyPayBeforeResult">$0.00</span></p>
+                        <p><strong>Monthly Pay (After Tax):</strong> <span id="monthlyPayAfterResult">$0.00</span></p>
+                    </div>
+                </div>
+
+                <div class="content-box calculator-content">
+                    <h2>How to calculate monthly pay</h2>
+                    <p>
+                        To estimate monthly pay, multiply your hourly rate by weekly hours and then by the average number of weeks in a month.
+                    </p>
+
+                    <p>
+                        To estimate monthly pay after tax, apply your estimated tax rate to your monthly gross pay.
+                    </p>
+
+                    <h2>Formula</h2>
+                    <p><strong>Hourly Rate × Weekly Hours × Weeks per Month = Monthly Pay</strong></p>
+
+                    <h2>Why use this calculator?</h2>
+                    <p>
+                        This calculator helps estimate monthly earnings for budgeting, job planning, and comparing income options.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">Work Pay Calculator</div>
+                <p class="footer-text">Free salary and work calculators for the USA.</p>
+            </div>
+
+            <div>
+                <div class="footer-title">Pages</div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+
+            <div>
+                <div class="footer-title">Calculators</div>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+                <a href="weekly-pay-calculator.html">Weekly Pay</a>
+                <a href="monthly-pay-calculator.html">Monthly Pay</a>
+                <a href="take-home-pay-calculator.html">Take-Home Pay</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Work Pay Calculator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

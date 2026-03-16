@@ -45,10 +45,8 @@ if (calculateButton) {
 
         document.getElementById("annualResult").textContent = formatCurrency(annualSalary);
         document.getElementById("annualAfterTaxResult").textContent = formatCurrency(annualAfterTax);
-
         document.getElementById("monthlyResult").textContent = formatCurrency(monthlySalary);
         document.getElementById("monthlyAfterTaxResult").textContent = formatCurrency(monthlyAfterTax);
-
         document.getElementById("weeklyResult").textContent = formatCurrency(weeklySalary);
         document.getElementById("weeklyAfterTaxResult").textContent = formatCurrency(weeklyAfterTax);
     });
@@ -60,13 +58,10 @@ if (resetHourlyButton) {
         document.getElementById("hoursPerWeek").value = "";
         document.getElementById("weeksPerYear").value = "52";
         document.getElementById("hourlyTaxRate").value = "20";
-
         document.getElementById("annualResult").textContent = "$0.00";
         document.getElementById("annualAfterTaxResult").textContent = "$0.00";
-
         document.getElementById("monthlyResult").textContent = "$0.00";
         document.getElementById("monthlyAfterTaxResult").textContent = "$0.00";
-
         document.getElementById("weeklyResult").textContent = "$0.00";
         document.getElementById("weeklyAfterTaxResult").textContent = "$0.00";
     });
@@ -113,7 +108,6 @@ if (resetSalaryButton) {
         document.getElementById("salaryHoursPerWeek").value = "";
         document.getElementById("salaryWeeksPerYear").value = "52";
         document.getElementById("salaryTaxRate").value = "20";
-
         document.getElementById("hourlyPayResult").textContent = "$0.00";
         document.getElementById("hourlyPayAfterTaxResult").textContent = "$0.00";
     });
@@ -159,7 +153,6 @@ if (resetOvertimeButton) {
         document.getElementById("overtimeHours").value = "";
         document.getElementById("overtimeMultiplier").value = "1.5";
         document.getElementById("overtimeTaxRate").value = "20";
-
         document.getElementById("overtimePayResult").textContent = "$0.00";
         document.getElementById("overtimePayAfterTaxResult").textContent = "$0.00";
     });
@@ -207,9 +200,130 @@ if (resetWorkHoursButton) {
         document.getElementById("daysWorked").value = "";
         document.getElementById("workHourlyRate").value = "";
         document.getElementById("workTaxRate").value = "20";
-
         document.getElementById("totalHoursResult").textContent = "0.00";
         document.getElementById("totalPayResult").textContent = "$0.00";
         document.getElementById("totalPayAfterTaxResult").textContent = "$0.00";
+    });
+}
+
+/* Weekly Pay */
+const weeklyCalculateButton = document.getElementById("weeklyCalculateButton");
+const resetWeeklyButton = document.getElementById("resetWeeklyButton");
+
+if (weeklyCalculateButton) {
+    weeklyCalculateButton.addEventListener("click", function () {
+        const hourlyRate = parseFloat(document.getElementById("weeklyHourlyRate").value);
+        const hoursWorked = parseFloat(document.getElementById("weeklyHoursWorked").value);
+        const taxRate = parseFloat(document.getElementById("weeklyTaxRate").value);
+
+        if (
+            isNaN(hourlyRate) ||
+            isNaN(hoursWorked) ||
+            isNaN(taxRate) ||
+            hourlyRate < 0 ||
+            hoursWorked < 0 ||
+            taxRate < 0 ||
+            taxRate > 100
+        ) {
+            alert("Please fill in all fields with valid numbers.");
+            return;
+        }
+
+        const weeklyPay = hourlyRate * hoursWorked;
+        const weeklyPayAfterTax = calculateAfterTax(weeklyPay, taxRate);
+
+        document.getElementById("weeklyPayBeforeResult").textContent = formatCurrency(weeklyPay);
+        document.getElementById("weeklyPayAfterResult").textContent = formatCurrency(weeklyPayAfterTax);
+    });
+}
+
+if (resetWeeklyButton) {
+    resetWeeklyButton.addEventListener("click", function () {
+        document.getElementById("weeklyHourlyRate").value = "";
+        document.getElementById("weeklyHoursWorked").value = "";
+        document.getElementById("weeklyTaxRate").value = "20";
+        document.getElementById("weeklyPayBeforeResult").textContent = "$0.00";
+        document.getElementById("weeklyPayAfterResult").textContent = "$0.00";
+    });
+}
+
+/* Monthly Pay */
+const monthlyCalculateButton = document.getElementById("monthlyCalculateButton");
+const resetMonthlyButton = document.getElementById("resetMonthlyButton");
+
+if (monthlyCalculateButton) {
+    monthlyCalculateButton.addEventListener("click", function () {
+        const hourlyRate = parseFloat(document.getElementById("monthlyHourlyRate").value);
+        const hoursPerWeek = parseFloat(document.getElementById("monthlyHoursPerWeek").value);
+        const weeksPerMonth = parseFloat(document.getElementById("weeksPerMonth").value);
+        const taxRate = parseFloat(document.getElementById("monthlyTaxRate").value);
+
+        if (
+            isNaN(hourlyRate) ||
+            isNaN(hoursPerWeek) ||
+            isNaN(weeksPerMonth) ||
+            isNaN(taxRate) ||
+            hourlyRate < 0 ||
+            hoursPerWeek < 0 ||
+            weeksPerMonth <= 0 ||
+            taxRate < 0 ||
+            taxRate > 100
+        ) {
+            alert("Please fill in all fields with valid numbers.");
+            return;
+        }
+
+        const monthlyPay = hourlyRate * hoursPerWeek * weeksPerMonth;
+        const monthlyPayAfterTax = calculateAfterTax(monthlyPay, taxRate);
+
+        document.getElementById("monthlyPayBeforeResult").textContent = formatCurrency(monthlyPay);
+        document.getElementById("monthlyPayAfterResult").textContent = formatCurrency(monthlyPayAfterTax);
+    });
+}
+
+if (resetMonthlyButton) {
+    resetMonthlyButton.addEventListener("click", function () {
+        document.getElementById("monthlyHourlyRate").value = "";
+        document.getElementById("monthlyHoursPerWeek").value = "";
+        document.getElementById("weeksPerMonth").value = "4.33";
+        document.getElementById("monthlyTaxRate").value = "20";
+        document.getElementById("monthlyPayBeforeResult").textContent = "$0.00";
+        document.getElementById("monthlyPayAfterResult").textContent = "$0.00";
+    });
+}
+
+/* Take-Home Pay */
+const takeHomeCalculateButton = document.getElementById("takeHomeCalculateButton");
+const resetTakeHomeButton = document.getElementById("resetTakeHomeButton");
+
+if (takeHomeCalculateButton) {
+    takeHomeCalculateButton.addEventListener("click", function () {
+        const grossPay = parseFloat(document.getElementById("grossPayInput").value);
+        const taxRate = parseFloat(document.getElementById("takeHomeTaxRate").value);
+
+        if (
+            isNaN(grossPay) ||
+            isNaN(taxRate) ||
+            grossPay < 0 ||
+            taxRate < 0 ||
+            taxRate > 100
+        ) {
+            alert("Please fill in all fields with valid numbers.");
+            return;
+        }
+
+        const takeHomePay = calculateAfterTax(grossPay, taxRate);
+
+        document.getElementById("grossPayBeforeResult").textContent = formatCurrency(grossPay);
+        document.getElementById("takeHomeAfterResult").textContent = formatCurrency(takeHomePay);
+    });
+}
+
+if (resetTakeHomeButton) {
+    resetTakeHomeButton.addEventListener("click", function () {
+        document.getElementById("grossPayInput").value = "";
+        document.getElementById("takeHomeTaxRate").value = "20";
+        document.getElementById("grossPayBeforeResult").textContent = "$0.00";
+        document.getElementById("takeHomeAfterResult").textContent = "$0.00";
     });
 }
