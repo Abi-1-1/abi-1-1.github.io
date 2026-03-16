@@ -897,3 +897,144 @@ button:hover {
         font-size: 17px;
     }
 }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: inline-block;
+    text-decoration: none;
+    color: #374151;
+    font-size: 15px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 15px;
+    margin: 0;
+}
+
+.dropdown-menu a:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle.active,
+.dropdown-toggle:hover {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.dropdown:hover .dropdown-toggle {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.copy-action {
+    background: #eef2ff;
+    color: #1d4ed8;
+    border: 1px solid #c7d2fe;
+}
+
+.copy-action:hover {
+    background: #e0e7ff;
+}
+
+.ad-placeholder {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 24px;
+}
+
+.related-section {
+    margin-top: 30px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.related-card {
+    display: block;
+    background: white;
+    border-radius: 18px;
+    padding: 18px;
+    text-decoration: none;
+    color: #111827;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.related-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+}
+
+.related-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.related-card p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.faq-mini {
+    margin-top: 30px;
+}
+
+.faq-mini h2 {
+    margin-bottom: 16px;
+}
+
+.faq-mini .faq-item {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+}
+
+@media (max-width: 900px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}

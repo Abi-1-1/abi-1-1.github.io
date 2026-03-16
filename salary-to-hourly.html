@@ -29,13 +29,20 @@
 
             <nav class="nav">
                 <a href="index.html">Home</a>
-                <a href="hourly-to-salary.html">Hourly to Salary</a>
-                <a class="active" href="salary-to-hourly.html">Salary to Hourly</a>
-                <a href="overtime-calculator.html">Overtime</a>
-                <a href="work-hours-calculator.html">Work Hours</a>
-                <a href="weekly-pay-calculator.html">Weekly Pay</a>
-                <a href="monthly-pay-calculator.html">Monthly Pay</a>
-                <a href="take-home-pay-calculator.html">Take-Home Pay</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Calculators ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="hourly-to-salary.html">Hourly to Salary</a>
+                        <a href="salary-to-hourly.html">Salary to Hourly</a>
+                        <a href="overtime-calculator.html">Overtime</a>
+                        <a href="work-hours-calculator.html">Work Hours</a>
+                        <a href="weekly-pay-calculator.html">Weekly Pay</a>
+                        <a href="monthly-pay-calculator.html">Monthly Pay</a>
+                        <a href="take-home-pay-calculator.html">Take-Home Pay</a>
+                    </div>
+                </div>
+
                 <a href="about.html">About</a>
             </nav>
         </div>
@@ -75,6 +82,7 @@
                     <div class="button-row">
                         <button id="salaryCalculateButton">Calculate</button>
                         <button type="button" class="secondary-action" id="resetSalaryButton">Reset</button>
+                        <button type="button" class="secondary-action copy-action" id="copySalaryButton">Copy Result</button>
                     </div>
 
                     <div class="result-box">
@@ -103,6 +111,44 @@
                         This tool helps compare salaried jobs with hourly jobs and gives a quick estimate
                         of how much your time is worth per hour.
                     </p>
+                </div>
+                                    Ad space placeholder — future calculator sponsorship or ad unit
+                </div>
+
+                <div class="related-section">
+                    <h2>Related Calculators</h2>
+                    <div class="related-grid">
+                        <a class="related-card" href="hourly-to-salary.html">
+                            <h3>Hourly to Salary</h3>
+                            <p>Convert hourly pay into yearly, monthly, and weekly estimates.</p>
+                        </a>
+
+                        <a class="related-card" href="monthly-pay-calculator.html">
+                            <h3>Monthly Pay</h3>
+                            <p>Estimate monthly pay before tax and after tax.</p>
+                        </a>
+
+                        <a class="related-card" href="take-home-pay-calculator.html">
+                            <h3>Take-Home Pay</h3>
+                            <p>Estimate simple after-tax take-home income.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="faq-mini">
+                    <h2>Quick FAQ</h2>
+
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3>Is this calculator free?</h3>
+                            <p>Yes. It is free to use.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Is the tax result exact?</h3>
+                            <p>No. It is a simple estimate based on the tax percentage you enter.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
