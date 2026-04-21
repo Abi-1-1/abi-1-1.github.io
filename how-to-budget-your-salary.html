@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Budget Your Salary | Work Pay Calculator</title>
+    <meta name="description" content="Learn how to budget your salary using simple rules like 50/30/20. Divide your income into needs, savings, and personal spending with practical steps and examples.">
+    <meta name="keywords" content="how to budget salary, 50 30 20 rule, budget your paycheck, salary budgeting guide, personal budget plan, income budgeting">
+    <meta name="author" content="Work Pay Calculator">
+    <link rel="canonical" href="https://abi-1-1.github.io/how-to-budget-your-salary.html">
+
+    <meta property="og:title" content="How to Budget Your Salary | Work Pay Calculator">
+    <meta property="og:description" content="A practical guide to budgeting your income using the 50/30/20 rule and other simple methods.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://abi-1-1.github.io/how-to-budget-your-salary.html">
+
+    <meta name="google-site-verification" content="kU5WNx88euEe9lSblEn7c-zo62_xEEezcfYsFqcPrnw" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4736461986844584"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+        .article-meta span {
+            font-size: 0.92rem;
+            color: var(--muted);
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.75);
+            border-radius: 999px;
+            border: 1px solid var(--border);
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            margin: 40px 0 14px;
+            color: var(--text);
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            margin: 28px 0 10px;
+            color: var(--text);
+        }
+        .article-body p {
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.85;
+            margin-bottom: 18px;
+        }
+        .article-body ul, .article-body ol {
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.85;
+            padding-left: 24px;
+            margin-bottom: 18px;
+        }
+        .article-body li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: rgba(108, 124, 255, 0.07);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 14px 14px 0;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: var(--text);
+            font-weight: 600;
+        }
+        .bucket-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 24px 0;
+        }
+        .bucket-card {
+            background: rgba(255,255,255,0.78);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+        }
+        .bucket-pct {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        .bucket-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+        .bucket-desc {
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        .example-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 1rem;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+        .example-table th {
+            background: rgba(108, 124, 255, 0.12);
+            color: var(--text);
+            font-weight: 700;
+            padding: 14px 18px;
+            text-align: left;
+        }
+        .example-table td {
+            padding: 13px 18px;
+            color: var(--muted);
+            border-bottom: 1px solid rgba(160, 175, 210, 0.18);
+            background: rgba(255,255,255,0.6);
+        }
+        .example-table tr:last-child td {
+            border-bottom: none;
+            font-weight: 700;
+            color: var(--text);
+            background: rgba(108,124,255,0.05);
+        }
+        .tip-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .tip-card {
+            background: rgba(255,255,255,0.75);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: var(--shadow-soft);
+        }
+        .tip-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .tip-card p { font-size: 0.96rem; color: var(--muted); margin: 0; line-height: 1.65; }
+        .cta-box {
+            background: linear-gradient(135deg, rgba(108,124,255,0.1), rgba(139,125,255,0.08));
+            border: 1px solid rgba(108,124,255,0.2);
+            border-radius: 20px;
+            padding: 28px 32px;
+            margin: 32px 0;
+            text-align: center;
+        }
+        .cta-box h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        .cta-box p { color: var(--muted); margin-bottom: 18px; }
+        @media (max-width: 760px) {
+            .bucket-grid, .tip-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-wrap">
+        <a href="index.html" class="logo">Work Pay Calculator</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="budget-calculator.html">Budget Calculator</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Calculators ▾</a>
+                <div class="dropdown-menu">
+                    <a href="hourly-to-salary.html">Hourly to Salary</a>
+                    <a href="salary-to-hourly.html">Salary to Hourly</a>
+                    <a href="overtime-calculator.html">Overtime Pay</a>
+                    <a href="work-hours-calculator.html">Work Hours</a>
+                    <a href="weekly-pay-calculator.html">Weekly Pay</a>
+                    <a href="monthly-pay-calculator.html">Monthly Pay</a>
+                    <a href="take-home-pay-calculator.html">Take-Home Pay</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle active">Guides ▾</a>
+                <div class="dropdown-menu">
+                    <a href="how-to-compare-job-offers.html">How to Compare Job Offers</a>
+                    <a class="active" href="how-to-budget-your-salary.html">How to Budget Your Salary</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero hero-large">
+        <div class="container">
+            <div class="hero-box">
+                <div class="hero-text">
+                    <span class="hero-badge">Practical Guide</span>
+                    <h1>How to Budget Your Salary</h1>
+                    <p>
+                        Knowing your salary is only the first step. What you do with it determines your
+                        financial future. This guide explains simple, proven budgeting methods — including
+                        the popular 50/30/20 rule — so you can take control of your money starting today.
+                    </p>
+                    <div class="article-meta">
+                        <span>Reading time: 6 min</span>
+                        <span>Topic: Budgeting</span>
+                        <span>Free guide</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="main-button" href="budget-calculator.html">Open Budget Calculator</a>
+                        <a class="secondary-button" href="take-home-pay-calculator.html">Find Take-Home Pay First</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container ad-section">
+        <ins class="adsbygoogle"
+             style="display:block; border-radius:18px; overflow:hidden;"
+             data-ad-client="ca-pub-4736461986844584"
+             data-ad-slot="YOUR_AD_SLOT_ID"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </section>
+
+    <section class="info-section">
+        <div class="container">
+            <div class="info-box article-body">
+
+                <h2>Before You Budget: Find Your Real Take-Home Pay</h2>
+                <p>
+                    The most common budgeting mistake is planning around your gross salary — the number on your
+                    offer letter — instead of your net pay, which is what actually reaches your bank account.
+                    Taxes, Social Security, Medicare, and any benefit deductions all reduce your paycheck before
+                    you see a cent.
+                </p>
+                <p>
+                    Always start a budget using your take-home pay. Use our
+                    <a href="take-home-pay-calculator.html" style="color:var(--primary);">Take-Home Pay Calculator</a>
+                    to estimate this number quickly.
+                </p>
+
+                <div class="highlight-box">
+                    <p>On a $60,000 salary, your take-home pay could be anywhere from $44,000 to $50,000 depending on your state, filing status, and deductions. Always budget with the real number.</p>
+                </div>
+
+                <h2>The 50/30/20 Rule: A Simple Starting Point</h2>
+                <p>
+                    The 50/30/20 rule is one of the most popular budgeting frameworks because it is simple,
+                    flexible, and works for most income levels. It divides your take-home pay into three categories:
+                </p>
+
+                <div class="bucket-grid">
+                    <div class="bucket-card">
+                        <div class="bucket-pct">50%</div>
+                        <div class="bucket-name">Needs</div>
+                        <div class="bucket-desc">Rent, groceries, utilities, transportation, insurance, and minimum debt payments</div>
+                    </div>
+                    <div class="bucket-card">
+                        <div class="bucket-pct">30%</div>
+                        <div class="bucket-name">Wants</div>
+                        <div class="bucket-desc">Dining out, subscriptions, hobbies, shopping, travel, and entertainment</div>
+                    </div>
+                    <div class="bucket-card">
+                        <div class="bucket-pct">20%</div>
+                        <div class="bucket-name">Savings</div>
+                        <div class="bucket-desc">Emergency fund, retirement, investments, and extra debt repayment</div>
+                    </div>
+                </div>
+
+                <h2>Example: Budgeting a $50,000 Take-Home Salary</h2>
+                <p>
+                    Here is how the 50/30/20 rule plays out on a $50,000 annual take-home income,
+                    which equals about $4,167 per month:
+                </p>
+
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Monthly Budget</th>
+                            <th>Annual Budget</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Needs (50%)</td>
+                            <td>$2,083</td>
+                            <td>$25,000</td>
+                            <td>Rent, food, transport, bills</td>
+                        </tr>
+                        <tr>
+                            <td>Wants (30%)</td>
+                            <td>$1,250</td>
+                            <td>$15,000</td>
+                            <td>Dining, streaming, hobbies</td>
+                        </tr>
+                        <tr>
+                            <td>Savings (20%)</td>
+                            <td>$833</td>
+                            <td>$10,000</td>
+                            <td>Emergency fund, 401(k), investments</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>$4,167</td>
+                            <td>$50,000</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Step-by-Step: Building Your First Budget</h2>
+                <ol>
+                    <li><strong>Calculate your monthly take-home pay.</strong> Use your most recent pay stub or our Take-Home Pay Calculator.</li>
+                    <li><strong>List your fixed monthly expenses.</strong> These are costs that do not change: rent, car payment, loan minimums, insurance premiums.</li>
+                    <li><strong>Estimate your variable expenses.</strong> Groceries, gas, utilities, and personal spending tend to fluctuate. Look at the last 2–3 months of bank statements to find a realistic average.</li>
+                    <li><strong>Set a savings target.</strong> Even saving $50 or $100 per month builds good habits and grows over time. Automate it if possible so you save before you spend.</li>
+                    <li><strong>Track and adjust.</strong> A budget is not a one-time document. Review it monthly and adjust whenever your income or expenses change.</li>
+                </ol>
+
+                <h2>What If 50% Is Not Enough for Needs?</h2>
+                <p>
+                    In high cost-of-living cities, rent alone can easily exceed 30–40% of take-home pay.
+                    If your needs consistently exceed 50%, you have a few options:
+                </p>
+                <ul>
+                    <li>Reduce wants temporarily to cover the shortfall</li>
+                    <li>Look for ways to lower fixed costs — different housing, refinancing, cutting subscriptions</li>
+                    <li>Increase income through overtime, a side job, or negotiating a raise</li>
+                    <li>Adjust your savings rate while still setting aside something, even 5–10%</li>
+                </ul>
+
+                <h2>Practical Budgeting Tips</h2>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h3>Pay yourself first</h3>
+                        <p>Transfer savings to a separate account immediately when your paycheck arrives. Treat it like a bill you cannot skip.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Build an emergency fund first</h3>
+                        <p>Before investing, save 3–6 months of essential expenses. This protects you from unexpected job loss or medical costs.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Use weekly budgeting for variable costs</h3>
+                        <p>Instead of a monthly food budget of $400, plan for $100 per week. Smaller timeframes are easier to track and control.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Review subscriptions regularly</h3>
+                        <p>Most people pay for 3–5 subscriptions they no longer use. A quarterly review can free up $20–$60 per month instantly.</p>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h3>Try our Budget Calculator</h3>
+                    <p>Enter your income and expenses to build a personalized monthly budget plan in seconds.</p>
+                    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                        <a class="main-button" href="budget-calculator.html">Open Budget Calculator</a>
+                        <a class="secondary-button" href="take-home-pay-calculator.html">Check Take-Home Pay</a>
+                    </div>
+                </div>
+
+                <h2>Budgeting for Part-Time and Hourly Workers</h2>
+                <p>
+                    If your income varies from week to week, budgeting can feel harder — but it is even more important.
+                    The key is to budget based on your lowest expected monthly income, not your average or best month.
+                    This builds a safety cushion for slow periods.
+                </p>
+                <p>
+                    Use our <a href="weekly-pay-calculator.html" style="color:var(--primary);">Weekly Pay Calculator</a>
+                    to estimate your earnings based on your hourly rate and hours worked each week.
+                </p>
+
+                <h2>Final Thoughts</h2>
+                <p>
+                    You do not need a complicated spreadsheet or a financial advisor to budget well.
+                    A simple framework like 50/30/20, applied consistently, can make a major difference
+                    over time. The most important thing is to start — even an imperfect budget is better
+                    than no budget at all.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="related-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Related Tools and Guides</h2>
+            </div>
+            <div class="cards cards-better">
+                <a class="card card-link" href="how-to-compare-job-offers.html">
+                    <span class="card-tag">Guide</span>
+                    <h3>How to Compare Two Job Offers</h3>
+                    <p>Evaluate salary, benefits, and total compensation to make the right career decision.</p>
+                </a>
+                <a class="card card-link" href="budget-calculator.html">
+                    <span class="card-tag">Calculator</span>
+                    <h3>Budget Calculator</h3>
+                    <p>Plan your monthly spending, savings, and expenses based on your income.</p>
+                </a>
+                <a class="card card-link" href="take-home-pay-calculator.html">
+                    <span class="card-tag">Calculator</span>
+                    <h3>Take-Home Pay Calculator</h3>
+                    <p>Find your real net income after taxes before you start budgeting.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Work Pay Calculator</h3>
+                    <p>Free salary, paycheck, and budget calculators for the USA.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Calculators</h4>
+                    <div class="footer-links-split">
+                        <ul class="footer-links">
+                            <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
+                            <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
+                            <li><a href="overtime-calculator.html">Overtime Pay</a></li>
+                            <li><a href="work-hours-calculator.html">Work Hours</a></li>
+                        </ul>
+                        <ul class="footer-links">
+                            <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
+                            <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
+                            <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
+                            <li><a href="budget-calculator.html">Budget Calculator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Work Pay Calculator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
