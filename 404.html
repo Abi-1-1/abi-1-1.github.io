@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Page Not Found | Work Pay Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #1a56db;
+      --blue-light: #ebf0ff;
+      --blue-hover: #1648c2;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #f9fafb;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* NAV */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 50;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
+      height: 60px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { font-size: 1rem; font-weight: 600; color: var(--text); text-decoration: none; }
+    .logo em { font-style: normal; color: var(--blue); }
+    .nav-links { display: flex; gap: 0.125rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.875rem; color: var(--muted); text-decoration: none;
+      padding: 0.375rem 0.625rem; border-radius: 6px;
+      transition: color .15s, background .15s;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--bg); }
+    /* MAIN */
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem; }
+    .wrap { max-width: 620px; width: 100%; text-align: center; }
+    /* badge */
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      background: var(--blue-light); color: var(--blue);
+      font-size: 0.75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+      padding: .3rem .85rem; border-radius: 999px; margin-bottom: 1.75rem;
+    }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+    /* 404 number */
+    .num {
+      font-family: 'DM Mono', monospace;
+      font-size: clamp(5.5rem, 18vw, 8.5rem);
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .rule {
+      width: 48px; height: 4px; background: var(--blue);
+      border-radius: 2px; margin: 1.25rem auto 0;
+    }
+    .h1 { font-size: 1.375rem; font-weight: 600; margin: 1.75rem 0 0.625rem; }
+    .desc {
+      font-size: 1rem; color: var(--muted); line-height: 1.7;
+      max-width: 400px; margin: 0 auto 2rem;
+    }
+    /* buttons */
+    .actions { display: flex; gap: .625rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+    .btn {
+      font-family: 'DM Sans', sans-serif; font-size: .9375rem; font-weight: 500;
+      padding: .625rem 1.375rem; border-radius: 8px; text-decoration: none;
+      transition: background .15s, transform .1s; display: inline-block;
+    }
+    .btn-blue { background: var(--blue); color: #fff; }
+    .btn-blue:hover { background: var(--blue-hover); transform: translateY(-1px); }
+    .btn-outline { background: #fff; color: var(--text); border: 1px solid var(--border); }
+    .btn-outline:hover { background: var(--bg); transform: translateY(-1px); }
+    /* calc cards */
+    .section-label {
+      font-size: .75rem; font-weight: 600; letter-spacing: .07em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 1rem;
+      padding-top: 2rem; border-top: 1px solid var(--border);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: .5rem;
+    }
+    .card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: .875rem 1rem;
+      text-decoration: none; text-align: left; display: block;
+      transition: border-color .15s, background .15s, transform .1s, box-shadow .15s;
+    }
+    .card:hover {
+      background: #fff; border-color: #c7d6ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26,86,219,.07);
+    }
+    .card-tag { font-size: .6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--blue); margin-bottom: .25rem; }
+    .card-name { font-size: .875rem; font-weight: 500; color: var(--text); line-height: 1.35; }
+    /* FOOTER */
+    footer { background: #111827; color: #9ca3af; padding: 2.5rem 1.5rem 1.75rem; }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem;
+    }
+    .footer-brand { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: .4rem; }
+    .footer-desc { font-size: .875rem; line-height: 1.65; }
+    .footer-col h4 {
+      font-size: .6875rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .08em; color: #e5e7eb; margin-bottom: .75rem;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .375rem; }
+    .footer-col a { font-size: .875rem; color: #d1d5db; text-decoration: none; transition: color .15s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-copy {
+      max-width: 1100px; margin: 1.5rem auto 0;
+      padding-top: 1.25rem; border-top: 1px solid #1f2937;
+      font-size: .8125rem; color: #6b7280;
+    }
+    @media (max-width: 600px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+  <script>
+    (function(){
+      var p = window.location.pathname;
+      if(p.indexOf('/work-pay-calculator/') === 0){
+        window.location.replace('https://abi-1-1.github.io' + p.replace('/work-pay-calculator/', '/') + window.location.search);
+      }
+    })();
+  </script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="https://abi-1-1.github.io/">Work <em>Pay</em> Calculator</a>
+    <ul class="nav-links">
+      <li><a href="https://abi-1-1.github.io/">Home</a></li>
+      <li><a href="https://abi-1-1.github.io/hourly-to-salary.html">Calculators</a></li>
+      <li><a href="https://abi-1-1.github.io/how-to-compare-job-offers.html">Guides</a></li>
+      <li><a href="https://abi-1-1.github.io/about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="badge"><span class="badge-dot"></span>Page not found</div>
+
+    <div class="num">404</div>
+    <div class="rule"></div>
+
+    <h1 class="h1">This page does not exist</h1>
+    <p class="desc">The URL you followed may have changed or been removed. Try one of our free calculators below or return to the homepage.</p>
+
+    <div class="actions">
+      <a class="btn btn-blue" href="https://abi-1-1.github.io/">Go to Homepage</a>
+      <a class="btn btn-outline" href="https://abi-1-1.github.io/hourly-to-salary.html">Browse Calculators</a>
+    </div>
+
+    <p class="section-label">Popular calculators</p>
+    <div class="grid">
+      <a class="card" href="https://abi-1-1.github.io/hourly-to-salary.html">
+        <div class="card-tag">Income</div>
+        <div class="card-name">Hourly to Salary</div>
+      </a>
+      <a class="card" href="https://abi-1-1.github.io/salary-to-hourly.html">
+        <div class="card-tag">Income</div>
+        <div class="card-name">Salary to Hourly</div>
+      </a>
+      <a class="card" href="https://abi-1-1.github.io/take-home-pay-calculator.html">
+        <div class="card-tag">Net Pay</div>
+        <div class="card-name">Take-Home Pay</div>
+      </a>
+      <a class="card" href="https://abi-1-1.github.io/budget-calculator.html">
+        <div class="card-tag">Budget</div>
+        <div class="card-name">Budget Calculator</div>
+      </a>
+      <a class="card" href="https://abi-1-1.github.io/overtime-calculator.html">
+        <div class="card-tag">Overtime</div>
+        <div class="card-name">Overtime Pay</div>
+      </a>
+      <a class="card" href="https://abi-1-1.github.io/weekly-pay-calculator.html">
+        <div class="card-tag">Paycheck</div>
+        <div class="card-name">Weekly Pay</div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer> 
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Work Pay Calculator</div>
+      <p class="footer-desc">Free salary, paycheck, and budget calculators for the USA.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="https://abi-1-1.github.io/about.html">About</a></li>
+        <li><a href="https://abi-1-1.github.io/contact.html">Contact</a></li>
+        <li><a href="https://abi-1-1.github.io/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="https://abi-1-1.github.io/terms.html">Terms</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Calculators</h4>
+      <ul>
+        <li><a href="https://abi-1-1.github.io/hourly-to-salary.html">Hourly to Salary</a></li>
+        <li><a href="https://abi-1-1.github.io/salary-to-hourly.html">Salary to Hourly</a></li>
+        <li><a href="https://abi-1-1.github.io/take-home-pay-calculator.html">Take-Home Pay</a></li>
+        <li><a href="https://abi-1-1.github.io/budget-calculator.html">Budget Calculator</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Work Pay Calculator. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
